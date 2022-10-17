@@ -7,6 +7,7 @@ class PostcodeDetails:
         self.newURL = self.url + self.postcode
         self.request_postcode = requests.get(self.url + self.postcode)
         self.status_code = self.request_postcode.status_code
+        self.all = self.request_postcode.json()
         self.postcode = self.request_postcode.json()["result"]["postcode"]
         self.longitude = self.request_postcode.json()["result"]["longitude"]
         self.latitude = self.request_postcode.json()["result"]["latitude"]
@@ -45,4 +46,10 @@ class PostcodeDetails:
     def get_newURL(self):
         return self.newURL
             
-    
+            
+    def getAll(self):
+        if self.check_postcode():
+            for key, value in self.all.items():
+                print(key, value)
+        else:
+            print("The postcode is not valid")
