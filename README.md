@@ -14,6 +14,14 @@ REST stands for REpresentational State Transfer. It is an architectural style fo
 
 JSON is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language Standard ECMA-262. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.
 
+The systanx of JSON is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be generated in many programming languages.
+
+```json
+{
+    "key": "value"
+}
+```
+
 ```json
 {
   "name": "Abishek Annese",
